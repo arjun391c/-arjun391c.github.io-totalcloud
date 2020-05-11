@@ -6,14 +6,15 @@
     <title>Total Cloud</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body class="dark">
+  <body class="">
     <nav>
       <div class="nav-left">
         <h4 class="logo">Total &nbsp cloud</h4>
       </div>
       <div class="theme">
         <label class="switch">
-          <input type="checkbox" checked />
+            <button onclick="myFunction()">Toggle dark mode</button>
+          <input type="checkbox" id="dark" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -75,6 +76,12 @@
         </ul>
       </section>
     </section>
-    <script src="./assets/js/main.js"></script>
+    <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("light");
+           console.log("clicked");
+        }
+        </script>
   </body>
 </html>
