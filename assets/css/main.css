@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  color: var(--primaryfont);
+}
+
+.light {
+  --primary: rgb(38, 46, 148);
+  --primaryfont: #000;
+  --mainbg: #fff;
+  --listbg: #fff;
+  --button:  mediumslateblue;
+}
+
+.dark {
+  --primary: #222;
+  --primaryfont: #fff;
+  --mainbg: #444;
+  --listbg: #555;
+  --button: #888;
+}
+
+h4,
+li,
+ul,
+p {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  padding: 20px 3%;
+  align-items: center;
+}
+
+nav .theme {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(161, 199, 230);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.nav-link li {
+  float: left;
+  margin-left: 10px;
+}
+.nav-link li a {
+  display: block;
+  padding: 5px 10px;
+  color: #fff;
+}
+.nav-left .logo {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+header h1 {
+  margin-top: 5%;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+section.main {
+  background-color: var(--mainbg);
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  border-radius: 2px;
+}
+
+section.list {
+  flex: 2;
+  background-color: var(--listbg);
+}
+
+section.buttons {
+  flex: 1;
+  text-align: center;
+  margin: auto 0;
+}
+
+section.list::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0);
+}
+section.list::-webkit-scrollbar-thumb {
+  background-color: #4f99df;
+}
+
+section.buttons button {
+  background-color: var(--button);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: #fff;
+  width: 100px;
+}
+
+/* mobile screen */
+@media only screen and (min-width: 320px) {
+  .nav-link {
+    display: none;
+  }
+
+  section.buttons {
+    text-align: center;
+    margin: auto 0;
+  }
+  section.buttons button {
+    margin: 15px 10px;
+  }
+  section.main {
+    margin-bottom: 20px;
+  }
+
+  section.list {
+    flex: 100%;
+    padding: 10px 0;
+    height: 200px;
+    overflow-y: scroll;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+
+  section.list li {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0;
+    background-color: var(--list);
+  }
+  section.list li p{
+      margin-left: 30px;
+      font-size: 1.3em;
+  }
+  section.list li:hover{
+      cursor: pointer;
+      background-color: #eee;
+  }
+}
+
+/* Small tabs*/
+@media only screen and (min-width: 760px) {
+  .nav-link {
+    display: block;
+  }
+
+  section.main {
+    margin-top: 150px;
+  }
+
+  section.list {
+    flex: 200px;
+    height: 40vh;
+    margin: 40px 20px;
+  }
+}
+
+
+
+/* large tabs and laptops*/
+@media only screen and (min-width: 1024px) {
+  .nav-link {
+    display: block;
+  }
+
+  header h1 {
+    margin-top: 150px;
+  }
+
+  section.buttons button {
+    margin: 30px auto;
+    display: block;
+  }
+  section.main {
+    margin-top: 100px;
+    padding: 0;
+  }
+
+  section.list {
+    height: 50vh;
+  }
+}
+
+/* desktops */
+@media only screen and (min-width: 1281px) {
+  .nav-link {
+    display: block;
+  }
+
+  header h1 {
+    margin-top: 100px;
+  }
+
+  section.buttons button {
+    margin: 30px auto;
+    display: block;
+  }
+  section.main {
+    margin-top: 100px;
+  }
+
+  section.list {
+    height: 50vh;
+  }
+  section.list:nth-child(1) {
+    margin-left: 300px;
+  }
+  section.list:last-child {
+    margin-right: 300px;
+  }
+}
