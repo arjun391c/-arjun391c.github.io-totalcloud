@@ -189,7 +189,7 @@ section.buttons button {
   .collapse li{
     color: #fff;
     display: block;
-    width: 200px;
+    width: 90%;
     height: 15%;
   }
   .collapse li a{
