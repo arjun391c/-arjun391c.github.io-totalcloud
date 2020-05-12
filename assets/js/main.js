@@ -30,7 +30,7 @@ window.onload = () => {
     }
   });
 
-  fetch("https://arjun391c.github.io/list.json")
+  fetch("https://arjun391c.github.io/totalcloud/list.json")
     .then((res) => res.json())
     .then((res) => appendData(res))
     .catch((err) => console.log(err));
