@@ -30,7 +30,7 @@ window.onload = () => {
     }
   });
 
-  fetch("./list.json")
+  fetch("./assets/js/list.json")
     .then((res) => res.json())
     .then((res) => appendData(res))
     .catch((err) => console.log(err));
