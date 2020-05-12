@@ -1,0 +1,64 @@
+[{
+    "id": "0",
+    "name": "Elizabeth Fisher",
+    "img" : "./assets/images/pf12.png",
+    "assign": false
+},
+{
+    "id": "1",
+    "name": "Andreea Lucas",
+    "img" : "./assets/images/pf1.png",
+    "assign": true
+},{
+    "id": "2",
+    "name": "Jonathan Carpenter",
+    "img" : "./assets/images/pf2.png",
+    "assign": false
+},{
+    "id": "3",
+    "name": "Kelly Young",
+    "img" : "./assets/images/pf3.png",
+    "assign": false
+},{
+    "id": "4",
+    "name": "Doris Patel",
+    "img" : "./assets/images/pf4.png",
+    "assign": false
+},
+{
+    "id": "5",
+    "name": "Harry Palmer",
+    "img" : "./assets/images/pf5.png",
+    "assign": false
+},{
+    "id": "6",
+    "name": "Jonathon Gibson",
+    "img" : "./assets/images/pf6.png",
+    "assign": false
+},{
+    "id": "7",
+    "name": "Elizabeth Fisher",
+    "img" : "./assets/images/pf7.png",
+    "assign": false
+},{
+    "id": "8",
+    "name": "Sam Fisher",
+    "img" : "./assets/images/pf8.png",
+    "assign": false
+},
+{
+    "id": "9",
+    "name": "Harry Potter",
+    "img" : "./assets/images/pf9.png",
+    "assign": false
+},{
+    "id": "10",
+    "name": "Lilly",
+    "img" : "./assets/images/pf10.png",
+    "assign": false
+},{
+    "id": "11",
+    "name": "John Honai",
+    "img" : "./assets/images/pf11.png",
+    "assign": false
+}]
