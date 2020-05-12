@@ -72,7 +72,7 @@ window.onload = () => {
     if (selected.length < 1) {
       alert("Select One");
     } else if (revoked.childElementCount < 1) {
-      alert("Revoked list is emty noting to assign");
+      alert("Revoked list is empty noting to assign");
     } else {
       assigned.appendChild(selected);
     }
@@ -88,7 +88,7 @@ window.onload = () => {
     if (selected.length < 1) {
       alert("Select One");
     } else if (assigned.childElementCount < 1) {
-      alert("Revoked list is emty noting to assign");
+      alert("Assigned list is empty noting to revoke");
     } else {
       revoked.appendChild(selected);
     }
