@@ -7,8 +7,8 @@ window.onload = () => {
   const revoked = document.getElementById("revoked");
   const listItem = document.getElementsByClassName("list-item");
   /* buttons */
-  const assignBtn = document.getElementById("assign-btn"); 
-  const revokeBtn = document.getElementById("revoke-btn"); 
+  const assignBtn = document.getElementById("assign-btn");
+  const revokeBtn = document.getElementById("revoke-btn");
 
   if (darkmode === "enabled") {
     body.classList.add("dark");
@@ -30,7 +30,7 @@ window.onload = () => {
     }
   });
 
-  fetch("../../list.json")
+  fetch("./list.json")
     .then((res) => res.json())
     .then((res) => appendData(res))
     .catch((err) => console.log(err));
@@ -59,9 +59,8 @@ window.onload = () => {
     });
   };
 
-  /* change on btn click */
+  assignBtn.addEventListener("click", () => {
+    console.log("clicked");
 
-  assignBtn.addEventListener('click',()=>{
-      console.log("clicked")
-  })
+  });
 };
