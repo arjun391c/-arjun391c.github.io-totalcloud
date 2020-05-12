@@ -69,10 +69,10 @@ window.onload = () => {
     }
   });
   assignBtn.addEventListener("click", () => {
-    if (selected.length < 1) {
-      alert("Select One");
-    } else if (revoked.childElementCount < 1) {
+    if (revoked.childElementCount < 1) {
       alert("Revoked list is empty noting to assign");
+    } else if (selected.length < 1) {
+      alert("Select One");
     } else {
       assigned.appendChild(selected);
     }
@@ -85,14 +85,14 @@ window.onload = () => {
     }
   });
   revokeBtn.addEventListener("click", () => {
-    if (selected.length < 1) {
+     if (assigned.childElementCount < 1) {
+        alert("Assigned list is empty noting to revoke");
+      } 
+    else if (selected.length < 1) {
       alert("Select One");
-    } else if (assigned.childElementCount < 1) {
-      alert("Assigned list is empty noting to revoke");
     } else {
       revoked.appendChild(selected);
     }
     selected = [];
   });
-
 };
