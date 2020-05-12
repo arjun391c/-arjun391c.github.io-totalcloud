@@ -61,20 +61,21 @@ window.onload = () => {
   };
   
   revoked.addEventListener("click", function(e) {
-    if (e.target && e.target.matches("li.list-item")) {
-      const item = revoked.removeChild(e.target);
-      assigned.appendChild(item);}
-    })
-  
-    assigned.addEventListener("click", function(e) {
-        if (e.target && e.target.matches("li.list-item")) {
-          const item = assigned.removeChild(e.target);
-          revoked.appendChild(item);}
-        })
-  
-
     assignBtn.addEventListener("click", () => {
-        console.log("clicked");
-        
+        if (e.target && e.target.matches("li.list-item")) {
+            const item = revoked.removeChild(e.target);
+            assigned.appendChild(item);
+          }
       });
+    });
+
+    assigned.addEventListener("click", function(e) {
+        console.log(e);
+        revokeBtn.addEventListener("click", () => {
+            if (e.target && e.target.matches("li.list-item")) {
+                const item = assigned.removeChild(e.target);
+                revoked.appendChild(item);
+              }
+          });
+        });
 };
