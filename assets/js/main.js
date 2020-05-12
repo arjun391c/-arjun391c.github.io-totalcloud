@@ -6,6 +6,7 @@ window.onload = () => {
   const assigned = document.getElementById("assigned");
   const revoked = document.getElementById("revoked");
   const listItem = document.getElementsByClassName("list-item");
+
   /* buttons */
   const assignBtn = document.getElementById("assign-btn");
   const revokeBtn = document.getElementById("revoke-btn");
@@ -58,9 +59,22 @@ window.onload = () => {
       }
     });
   };
+  
+  revoked.addEventListener("click", function(e) {
+    if (e.target && e.target.matches("li.list-item")) {
+      const item = revoked.removeChild(e.target);
+      assigned.appendChild(item);}
+    })
+  
+    assigned.addEventListener("click", function(e) {
+        if (e.target && e.target.matches("li.list-item")) {
+          const item = assigned.removeChild(e.target);
+          revoked.appendChild(item);}
+        })
+  
 
-  assignBtn.addEventListener("click", () => {
-    console.log("clicked");
-
-  });
+    assignBtn.addEventListener("click", () => {
+        console.log("clicked");
+        
+      });
 };
