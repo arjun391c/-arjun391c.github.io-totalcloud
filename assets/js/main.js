@@ -5,11 +5,26 @@ window.onload = () => {
   const toggle = document.getElementById("dark");
   const assigned = document.getElementById("assigned");
   const revoked = document.getElementById("revoked");
-  const listItem = document.getElementsByClassName("list-item");
+  const toggler = document.getElementById("toggler");
+  const nav = document.getElementById("nav");
+  const cross = document.getElementById("toggler-cross");
 
   /* buttons */
   const assignBtn = document.getElementById("assign-btn");
   const revokeBtn = document.getElementById("revoke-btn");
+
+
+  /* navigation */
+  toggler.addEventListener("click", ()=>{
+    nav.classList.remove("nav-hide")
+    nav.classList.add("collapse");
+  });
+  cross.addEventListener("click", ()=>{
+    nav.classList.add("nav-hide")
+    nav.classList.remove("collapse");
+  })
+
+  /* dark mode */
 
   if (darkmode === "enabled") {
     body.classList.add("dark");

@@ -43,6 +43,7 @@ nav {
   display: flex;
   padding: 20px 3%;
   align-items: center;
+  position: relative;
 }
 
 nav .theme {
@@ -171,8 +172,41 @@ section.buttons button {
 
 /* mobile screen */
 @media only screen and (min-width: 320px) {
-  .nav-link {
+  .nav-hide {
     display: none;
+    transition: all ease-in-out .6s;
+  }
+
+  .collapse{
+    margin: 0;
+    background-color: #444;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    padding: 50px 0;
+    transition: all ease-in-out .6s;
+  }
+  .collapse li{
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 15%;
+  }
+  .collapse li a{
+    display: block;
+    padding: 20px 10px;
+  }
+  
+  #toggler{
+    font-size: 40px;
+  }
+  #toggler-cross{
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+    top:10px;
   }
 
   section.buttons {
@@ -216,6 +250,9 @@ section.buttons button {
 @media only screen and (min-width: 760px) {
   .nav-link {
     display: block;
+  }
+  #toggler{
+    display: none;
   }
 
   section.main {
