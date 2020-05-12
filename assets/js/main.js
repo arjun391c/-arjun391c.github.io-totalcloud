@@ -69,13 +69,23 @@ window.onload = () => {
       });
     });
 
+    revokeBtn.addEventListener("click",(e)=>{
+        if(assigned.childElementCount < 1)
+            alert("Assigned list is emty noting to revoke");
+            e.preventDefault();
+    })
+    assignBtn.addEventListener("click",(e)=>{
+        if(revoked.childElementCount < 1)
+            alert("Revoked list is emty noting to assign");
+            e.preventDefault();
+    })
+
     assigned.addEventListener("click", function(e) {
-        console.log(e);
         revokeBtn.addEventListener("click", () => {
-            if (e.target && e.target.matches("li.list-item")) {
+            if (e.target && e.target.matches("li.list-item") && assigned.hasChildNodes()) {
                 const item = assigned.removeChild(e.target);
                 revoked.appendChild(item);
               }
           });
-        });
+        });        
 };
