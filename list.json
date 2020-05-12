@@ -1,6 +1,6 @@
 [{
     "id": "0",
-    "name": "Elizabeth Fisher",
+    "name": "Jonathan Carpenter",
     "img" : "./assets/images/pf12.png",
     "assign": false
 },
@@ -11,7 +11,7 @@
     "assign": true
 },{
     "id": "2",
-    "name": "Jonathan Carpenter",
+    "name": "Elizabeth Fisher",
     "img" : "./assets/images/pf2.png",
     "assign": false
 },{
@@ -42,23 +42,23 @@
     "assign": false
 },{
     "id": "8",
-    "name": "Sam Fisher",
+    "name": "Emma",
     "img" : "./assets/images/pf8.png",
     "assign": false
 },
 {
     "id": "9",
-    "name": "Harry Potter",
+    "name": "Lilly",
     "img" : "./assets/images/pf9.png",
     "assign": false
 },{
     "id": "10",
-    "name": "Lilly",
+    "name": "Harry Potter",
     "img" : "./assets/images/pf10.png",
     "assign": false
 },{
     "id": "11",
-    "name": "John Honai",
+    "name": "Sara",
     "img" : "./assets/images/pf11.png",
     "assign": false
 }]
