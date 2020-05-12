@@ -180,10 +180,9 @@ section.buttons button {
     margin: 0;
     background-color: #444;
     z-index: 1;
-    width: 100%;
     position: absolute;
     top: 0px;
-    height: 100vh;
+    margin: 0;
     padding: 50px 0;
     transition: all ease-in-out .6s;
   }
