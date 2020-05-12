@@ -54,38 +54,45 @@ window.onload = () => {
         newli.appendChild(img);
         newli.appendChild(p);
         p.innerHTML = item.name;
+        p.id = item.id;
         img.src = `${item.img}`;
         newli.className = "list-item";
       }
     });
   };
-  
-  revoked.addEventListener("click", function(e) {
-    assignBtn.addEventListener("click", () => {
-        if (e.target && e.target.matches("li.list-item")) {
-            const item = revoked.removeChild(e.target);
-            assigned.appendChild(item);
-          }
-      });
-    });
 
-    revokeBtn.addEventListener("click",(e)=>{
-        if(assigned.childElementCount < 1)
-            alert("Assigned list is emty noting to revoke");
-            e.preventDefault();
-    })
-    assignBtn.addEventListener("click",(e)=>{
-        if(revoked.childElementCount < 1)
-            alert("Revoked list is emty noting to assign");
-            e.preventDefault();
-    })
+  var selected = [];
 
-    assigned.addEventListener("click", function(e) {
-        revokeBtn.addEventListener("click", () => {
-            if (e.target && e.target.matches("li.list-item") && assigned.hasChildNodes()) {
-                const item = assigned.removeChild(e.target);
-                revoked.appendChild(item);
-              }
-          });
-        });        
+  revoked.addEventListener("click", function (e) {
+    if (e.target && e.target.matches("li.list-item")) {
+      selected = e.target;
+    }
+  });
+  assignBtn.addEventListener("click", () => {
+    if (selected.length < 1) {
+      alert("Select One");
+    } else if (revoked.childElementCount < 1) {
+      alert("Revoked list is emty noting to assign");
+    } else {
+      assigned.appendChild(selected);
+    }
+    selected = [];
+  });
+
+  assigned.addEventListener("click", function (e) {
+    if (e.target && e.target.matches("li.list-item")) {
+      selected = e.target;
+    }
+  });
+  revokeBtn.addEventListener("click", () => {
+    if (selected.length < 1) {
+      alert("Select One");
+    } else if (assigned.childElementCount < 1) {
+      alert("Revoked list is emty noting to assign");
+    } else {
+      revoked.appendChild(selected);
+    }
+    selected = [];
+  });
+
 };
