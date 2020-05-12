@@ -14,6 +14,7 @@ body {
   --mainbg: #fff;
   --listbg: #fff;
   --button:  mediumslateblue;
+  --nav: #fff;
 }
 
 .dark {
@@ -22,6 +23,7 @@ body {
   --mainbg: #444;
   --listbg: #555;
   --button: #888;
+  --nav: #444;
 }
 
 h4,
@@ -178,27 +180,30 @@ section.buttons button {
 
   .collapse{
     margin: 0;
-    background-color: #444;
+    background-color: var(--nav);
     z-index: 1;
     position: absolute;
     top: 0px;
+    left: 0px;
     margin: 0;
     padding: 50px 0;
     transition: all ease-in-out .6s;
   }
   .collapse li{
-    color: #fff;
     display: block;
     width: 90%;
     height: 15%;
   }
   .collapse li a{
+    color: var(--primaryfont);
+
     display: block;
     padding: 20px 10px;
   }
   
   #toggler{
     font-size: 40px;
+    color: #fff;
   }
   #toggler-cross{
     font-size: 40px;
